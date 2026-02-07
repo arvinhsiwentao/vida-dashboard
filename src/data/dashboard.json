@@ -1,0 +1,33 @@
+{
+  "lastUpdated": "2026-02-08T02:00:00Z",
+  "core": {
+    "name": "Vida",
+    "version": "2026.2",
+    "status": "operational"
+  },
+  "skills": [
+    {"id": "brand-builder", "name": "Brand Builder", "description": "AI-powered brand building system", "status": "active", "automationLevel": 80},
+    {"id": "travel-planner", "name": "Travel Planner", "description": "Trip planning and local discovery", "status": "active", "automationLevel": 70},
+    {"id": "last30days", "name": "Last 30 Days", "description": "Research Reddit + X trends", "status": "active", "automationLevel": 90},
+    {"id": "nano-banana-pro", "name": "Nano Banana Pro", "description": "AI image generation", "status": "active", "automationLevel": 85},
+    {"id": "github", "name": "GitHub", "description": "PR, Issue, CI operations", "status": "active", "automationLevel": 75},
+    {"id": "coding-agent", "name": "Coding Agent", "description": "Claude Code / Codex control", "status": "active", "automationLevel": 95}
+  ],
+  "integrations": [
+    {"id": "google-sheets", "name": "Google Sheets", "status": "connected", "icon": "📊"},
+    {"id": "tana", "name": "Tana", "status": "connected", "icon": "📝"},
+    {"id": "github", "name": "GitHub", "status": "connected", "icon": "🐙"},
+    {"id": "whatsapp", "name": "WhatsApp", "status": "connected", "icon": "💬"},
+    {"id": "gmail", "name": "Gmail", "status": "connected", "icon": "📧"}
+  ],
+  "cronJobs": [
+    {"id": "morning-brief", "name": "Morning Brief", "schedule": "08:30", "enabled": true, "lastStatus": "ok"},
+    {"id": "tech-news", "name": "Tech News", "schedule": "07:00", "enabled": true, "lastStatus": "ok"},
+    {"id": "brand-scan", "name": "Brand Scan", "schedule": "10:00", "enabled": true, "lastStatus": "ok"},
+    {"id": "threads-reminder", "name": "Threads Reminder", "schedule": "18:00", "enabled": true, "lastStatus": "ok"}
+  ],
+  "projects": [
+    {"id": "vida-dashboard", "name": "Vida Dashboard", "status": "active", "progress": 10},
+    {"id": "reverie", "name": "Reverie Brand", "status": "paused", "progress": 60}
+  ]
+}
