@@ -1,8 +1,8 @@
 import { useCallback, useState } from 'react';
 import {
   ReactFlow,
-  Node,
-  Edge,
+  type Node,
+  type Edge,
   Background,
   Controls,
   useNodesState,
@@ -96,7 +96,7 @@ const generateNodesAndEdges = () => {
     { id: 'projects', label: 'Projects', x: 700, y: 500, color: '#ff6600', data: dashboardData.projects },
   ];
 
-  categories.forEach((cat, catIndex) => {
+  categories.forEach((cat) => {
     // Category node
     nodes.push({
       id: cat.id,
@@ -150,8 +150,8 @@ const generateNodesAndEdges = () => {
 
 function App() {
   const { nodes: initialNodes, edges: initialEdges } = generateNodesAndEdges();
-  const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
-  const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
+  const [nodes, , onNodesChange] = useNodesState(initialNodes);
+  const [edges, , onEdgesChange] = useEdgesState(initialEdges);
   const [selectedNode, setSelectedNode] = useState<any>(null);
 
   const onNodeClick = useCallback((_: any, node: Node) => {
